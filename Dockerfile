@@ -8,6 +8,7 @@
 # Ejecutamos el comando mvn clean package (Generara un archivo JAR para el despliegue)
 FROM maven:3.8.5-openjdk-17 AS build
 COPY . .
+RUN ls -al
 RUN mvn clean package
 
 # Usamos una imagen de Openjdk v17
